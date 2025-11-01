@@ -1,0 +1,109 @@
+html, body{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    background-color: #f3d7c2;
+    display: flex; /* alinhamento do título e do flex-wrapper */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-wrapper{ /* "container" que fica todos os contatos com suas respectivas informações */
+    background-color: #FFFFF0;
+    width: max-content;
+    max-width: 500px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+/* personalizando barra de rolagem */
+
+.list-wrapper::-webkit-scrollbar{ /*largura*/
+    width: 10px;
+}
+
+.list-wrapper::-webkit-scrollbar-track{ /*fundo da barra*/
+    background: black;
+}
+
+.list-wrapper::-webkit-scrollbar-thumb{ /* parte em movimento */
+    background: #F5BABB;
+    border-radius: 10px;
+}
+
+.list-wrapper::-webkit-scrollbar-thumb:hover{ /* ao passar o mouse na barra em movimento */
+    background: #D92C54;
+    border-radius: 10px;
+}
+
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #E7D3D3;
+    padding: 10px;
+}
+
+.list-item:hover{
+    background-color: #EA5B6F;
+}
+
+.list-item__image img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.list-item__content{
+    padding: 10px;
+    margin-left: 5px;
+    flex-grow: 1; /* elemento ocupa todo o espaço restante */
+}
+
+.list-item__name{
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.list-item__message{
+    text-align: left;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.list-item__actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px; /* gap: espaço entre os ícones */
+    padding: 0 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.list-item__actions img{
+    width: 15px;
+}
+
+.list-item__actions img:hover{
+    transform: scale(1.1); /* aumenta o tamanho da imagem ao passar o mouse */
+}
+
+.list-item:hover .list-item__actions{
+    visibility: visible;
+    opacity: .5;
+}
