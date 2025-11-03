@@ -92,11 +92,11 @@ body {
     gap: 15px; /* gap: espaço entre os ícones */
     padding: 0 10px;
     visibility: hidden;
-    opacity: 0;
+    opacity: 0.75;
 }
 
 .list-item__actions img{
-    width: 15px;
+    width: 20px;
 }
 
 .list-item__actions img:hover{
